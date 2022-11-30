@@ -1,0 +1,67 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERALI */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}                                                     
+
+footer{
+    height: 15vh;
+}
+
+.flex{
+    display: flex;
+}
+
+/* PALETTE */
+
+:root{
+    --aside: black;
+    --header: #080b12;
+    --main: #141922;
+    --footer: #282828;
+    --text-light: #686b6f;
+    --text-white: #fbfcfb;
+}
+
+/* MAIN */
+
+/* ASIDE */
+
+.col1{
+    background-color: var(--aside);
+    height: 85vh;
+    width: 20%;
+    color: var(--text-light);
+    padding: 2rem;
+}
+
+
+
+
+/* MAIN */
+
+.col2{
+    background-color: var(--main);
+    height: 85vh;
+    width: 80%;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: var(--footer);
+}
+
+.foot-cont{
+    justify-content: space-between;
+    align-items: center;
+}
