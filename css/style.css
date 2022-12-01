@@ -13,11 +13,15 @@ body{
 }                                                     
 
 footer{
-    height: 15vh;
+    height: 100px;
 }
 
 .flex{
     display: flex;
+}
+
+button{
+    cursor: pointer;
 }
 
 /* PALETTE */
@@ -33,14 +37,18 @@ footer{
 
 /* MAIN */
 
+main{
+    height: calc(100vh - 100px);
+}
+
 /* ASIDE */
 
 .col1{
     background-color: var(--aside);
-    height: 85vh;
-    width: 20%;
+    width: 250px;
     color: var(--text-light);
     padding: 2rem;
+    height: calc(100vh - 100px);
 }
 
 
@@ -50,8 +58,7 @@ footer{
 
 .col2{
     background-color: var(--main);
-    height: 85vh;
-    width: 80%;
+    width: calc(100vw - 250px);
 }
 
 
@@ -59,9 +66,144 @@ footer{
 
 footer{
     background-color: var(--footer);
+    padding: 0 20px;
+    
 }
 
 .foot-cont{
     justify-content: space-between;
+    height: 100px;
+}
+
+.left, .right, .center{
     align-items: center;
+    justify-content: center;
+}
+
+/* LEFT */
+
+.player-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.player-img{
+    width: 50px;
+    height: 50px;
+}
+
+.text-play div:first-child{
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.text-play div:nth-child(2){
+    color: var(--text-light);
+    font-size: 0.7em;
+}
+
+.text-play{
+    padding: 0 10px;
+}
+
+.button-left button{
+    background-color: var(--footer);
+    border: none;
+    color: var(--text-light);
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+.button-left{
+    padding: 0 20px;
+}
+
+/* CENTER */
+
+.center{
+    flex-direction: column;
+}
+
+.play1, .play2{
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.play1 button{
+    background-color: var(--footer);
+    border: none;
+    color: var(--text-white);
+    font-size: 23px;
+    padding: 0 15px;
+}
+
+.play1 .special{
+    font-size: 35px;
+    padding: 0 20px;
+}
+
+.play2{
+    color: var(--text-white);
+}
+
+.prog1,
+.prog2 {
+    position: relative;
+    height: 5px;
+    width: 450px;
+    cursor: pointer;
+  }
+  
+  .prog1::before,
+  .prog1::after,
+  .prog2::before,
+  .prog2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 20px;
+  }
+  
+  .prog1::before,
+  .prog2::before {
+    width: 100%;
+    background: var(--text-light);
+  }
+  
+  .prog1::after,
+  .prog2::after {
+    width: 25%;
+    background: var(--text-white);
+  }
+
+
+.prog2{
+    width: 150px;
+}
+
+.play2 span{
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* RIGHT */
+
+.right{
+    flex-wrap: wrap;
+}
+
+.right button{
+    background-color: var(--footer);
+    border: none;
+    color: var(--text-white);
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.right button:nth-child(3){
+    padding-right: 25px;
 }

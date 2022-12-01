@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Spotify - Lettore Web</title>
     </head>
     <body>
@@ -29,37 +30,70 @@
             </div>
         </main>
 
+
+        <!-- FOOTER -->
         <footer>
 
             <div class="flex foot-cont">
 
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="flex left">
+                    <span class="player-img">
+                        <img src="./img/sinister.jpeg" alt="player-left">
+                    </span>
+                    <span class="text-play">
+                        <div>Sinister</div>
+                        <div>Brano Nome</div>
+                    </span>
+
+                    <div class="flex button-left">
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                        <button>
+                            <i class="fa-regular fa-folder"></i>
+                        </button>
+                    </div>
+
                 </div>
 
-                <div>
-                    <div>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                <div class="flex center">
+                    <div class="flex play1">
+                        <button>
+                            <i class="fa-solid fa-shuffle"></i>
+                        </button>
+                        <button>
+                            <i class="fa-regular fa-circle-left"></i>
+                        </button>
+                        <button class="special">
+                            <i class="fa-regular fa-circle-play"></i>
+                        </button>
+                        <button>
+                            <i class="fa-regular fa-circle-right"></i>
+                        </button>
+                        <button>
+                            <i class="fa-sharp fa-solid fa-rotate-right"></i>
+                        </button>
                     </div>
-                    <div>
-                        <span></span>
-                        <progress value="" max=""></progress>
-                        <span></span>
+                    <div class="flex play2">
+                        <span>0:25</span>
+                        <progress class="prog1"></progress>
+                        <span>4:35</span>
                     </div>
                 </div>
 
-                <div>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <progress value="" max=""></progress>
+                <div class="flex right">
+                    <div>
+                        <button>
+                            <i class="fa-solid fa-list-ul"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-display"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                    </div>
+                    <progress class="prog2"></progress>
                 </div>
 
 
