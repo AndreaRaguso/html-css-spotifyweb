@@ -35,30 +35,276 @@ button{
     --text-white: #fbfcfb;
 }
 
+
+/* SCROLLBAR */
+
+.col2{
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--header); 
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--footer); 
+  }
+
+
 /* MAIN */
 
 main{
     height: calc(100vh - 100px);
+    
 }
+
+/* COL2 */
+
+.col2{
+    width: calc(100vw - 200px);
+    height: calc(100vh - 100px);
+    overflow: auto;
+    background-color: var(--main);
+}
+
+header{
+    background-color: var(--header);
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    left: 0;
+    scroll-margin-top: 100px;
+    z-index: 30;
+    width: 100%;
+}
+
+.btn-up{
+    color: var(--text-white);
+    border-radius: 40px;
+    border: 1px solid var(--text-white);
+    background-color: var(--header);
+    padding: 13px 35px;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.nav-main{
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.nav-main ul{
+    list-style: none;
+}
+
+.nav-main ul li{
+    display: inline-block;
+}
+
+.nav-main ul li a{
+    color: var(--text-light);
+    padding: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-main ul li:first-child{
+    border-bottom: 2px solid lime;
+}
+
+.brane{
+    margin: 10px 20px;
+}
+
+/* CARDS */
+
+.col2 h2{
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 23px;
+    padding-bottom: 10px;
+}
+
+.col2 h3{
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 0;
+
+}
+
+.col2 h4{
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+.cards{
+    justify-content: space-between;
+}
+
+#created .cards,
+#artist .cards{
+    justify-content: flex-start;
+}
+
+#created .card,
+#artist .card{
+    margin-right: 15px;
+}
+
+.card{
+    width: calc(100% / 6 - 10px);
+    margin: 30px 0;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+}
+
+#artist .card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+
+
 
 /* ASIDE */
 
 .col1{
+    width: 200px;
     background-color: var(--aside);
-    width: 250px;
-    color: var(--text-light);
-    padding: 2rem;
     height: calc(100vh - 100px);
 }
 
+.col1-cont{
+    width: 85%;
+    margin: 0 auto;
+    color: var(--text-light);
+    flex-wrap: wrap;
+    height: 100%;
+}
 
+.col1-cont div{
+    width: 100%;
+}
 
+.logo{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* MAIN */
+.logo img{
+    width: 90%;
+}
 
-.col2{
-    background-color: var(--main);
-    width: calc(100vw - 250px);
+.option{
+    margin: 20px 0;
+}
+
+.home{
+    color: var(--text-white);
+    font-weight: bold;
+}
+
+.option span{
+    vertical-align: middle;
+}
+
+.option img{
+    width: 20%;
+}
+
+.playlist{
+    padding-bottom: 20px;
+}
+
+.playlist h3{
+    color: var(--text-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.playlist i{
+    color: var(--text-light);
+    font-size: 50px;
+    border-radius: none;
+    padding-right: 10px;
+}
+
+.playlist span{
+    vertical-align: middle;
+}
+
+.nav-playlist{
+    overflow: auto;
+}
+
+.nav-playlist ul{
+    list-style: none;
+    line-height: 2.5rem;
+}
+
+.nav-playlist ul li a{
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.bottom-aside{
+    align-self: flex-end;
+}
+
+.top-a,.bot-a{
+    padding: 10px 0;
+}
+
+.top-a span,.bot-a span{
+    padding-right: 10px;
+}
+
+.bottom-aside span{
+    vertical-align: middle;
+}
+
+.top-a img{
+    width: 10%;
+}
+
+.bot-a img{
+    width: 20%;
+    background-color: var(--text-light);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.bot-a{
+    color:var(--text-white);
+    font-weight: bold;
 }
 
 
