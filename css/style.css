@@ -24,6 +24,10 @@ button{
     cursor: pointer;
 }
 
+section{
+    margin-top: 30px;
+}
+
 /* PALETTE */
 
 :root{
@@ -66,9 +70,8 @@ button{
 
 /* MAIN */
 
-main{
+.main-cont{
     height: calc(100vh - 100px);
-    
 }
 
 /* COL2 */
@@ -101,11 +104,19 @@ header{
     font-size: 12px;
     text-decoration: none;
     margin: 20px;
+    text-align: center;
 }
+
+.btn-up:hover{
+    padding: 15px 40px;
+}
+
 
 .nav-main{
     justify-content: center;
     padding: 20px 0;
+    text-align: center;
+    line-height: 30px;
 }
 
 .nav-main ul{
@@ -123,6 +134,10 @@ header{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.nav-main ul li a:hover{
+    color: var(--text-white);
 }
 
 .nav-main ul li:first-child{
@@ -156,6 +171,7 @@ header{
 }
 
 .cards{
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -169,19 +185,59 @@ header{
     margin-right: 15px;
 }
 
+ 
+
+.container-over:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container-over {
+  position: relative;
+  width: 100%;
+}
+
+
+.container-over img{
+  display: block;
+  width: 100%;
+}
+
+.overlay{
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  background: rgba(0, 0, 0, 0.8); 
+  color: #f1f1f1; 
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity:0;
+  font-size: 5rem;
+  text-align: center;
+  transform: translate(-50%, -50%);
+} 
+
+.overlay i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
 .card{
     width: calc(100% / 6 - 10px);
     margin: 30px 0;
     text-align: center;
 }
 
-.card img{
-    width: 100%;
-}
-
 #artist .card img{
     width: 100%;
     object-fit: cover;
+    border-radius: 50%;
+}
+
+#artist .overlay{
     border-radius: 50%;
 }
 
@@ -195,7 +251,17 @@ header{
 .col1{
     width: 200px;
     background-color: var(--aside);
-    height: calc(100vh - 100px);
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.col1 span{
+    cursor: pointer;
+}
+
+.col1 span:hover,
+.col1 ul li a:hover{
+    color: var(--text-white);
 }
 
 .col1-cont{
@@ -203,7 +269,7 @@ header{
     margin: 0 auto;
     color: var(--text-light);
     flex-wrap: wrap;
-    height: 100%;
+    height: calc(100vh - 100px);
 }
 
 .col1-cont div{
@@ -215,6 +281,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#logo-small{
+    display: none;
 }
 
 .logo img{
@@ -263,6 +333,7 @@ header{
 
 .nav-playlist{
     overflow: auto;
+    min-height: 300px;
 }
 
 .nav-playlist ul{
@@ -283,7 +354,13 @@ header{
     padding: 10px 0;
 }
 
-.top-a span,.bot-a span{
+.top-a div,
+.bot-a div{
+    display: inline;
+    vertical-align: middle;
+}
+
+.top-a div,.bot-a div{
     padding-right: 10px;
 }
 
@@ -292,7 +369,7 @@ header{
 }
 
 .top-a img{
-    width: 10%;
+    width: 20%;
 }
 
 .bot-a img{
@@ -313,6 +390,9 @@ header{
 footer{
     background-color: var(--footer);
     padding: 0 20px;
+    position: sticky;
+    bottom: 0;
+    right: 0;
     
 }
 
@@ -321,36 +401,45 @@ footer{
     height: 100px;
 }
 
-.left, .right, .center{
+.left, .right, .center, .menu-s{
     align-items: center;
     justify-content: center;
 }
 
 /* LEFT */
+.left{
+    align-items: center;
+    justify-content: flex-start;
+}
 
 .player-img img{
-    width: 100%;
-    height: 100%;
+    width: auto;
+    max-height: 60px;
 }
 
-.player-img{
+/* .player-img{
     width: 50px;
     height: 50px;
-}
+}  */
 
 .text-play div:first-child{
     color: var(--text-white);
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .text-play div:nth-child(2){
     color: var(--text-light);
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .text-play{
     padding: 0 10px;
+}
+
+.text-play div:nth-child(2):hover{
+    text-decoration: underline;
+    color: var(--text-white);
 }
 
 .button-left button{
@@ -365,15 +454,24 @@ footer{
     padding: 0 20px;
 }
 
+.button-left button:hover{
+    color: var(--text-white);
+}
+
+
 /* CENTER */
 
 .center{
     flex-direction: column;
+    width: 50%;
 }
 
-.play1, .play2{
+.play1, 
+.play2{
     align-items: center;
     padding-bottom: 10px;
+    width: 100%;
+    justify-content: center;
 }
 
 .play1 button{
@@ -382,6 +480,12 @@ footer{
     color: var(--text-white);
     font-size: 23px;
     padding: 0 15px;
+    height: 90%;
+}
+
+.play1 button:hover{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .play1 .special{
@@ -391,6 +495,7 @@ footer{
 
 .play2{
     color: var(--text-white);
+    position: relative;
 }
 
 .prog1,
@@ -425,6 +530,35 @@ footer{
     background: var(--text-white);
   }
 
+  .prog1:hover::after,
+  .prog2:hover::after {
+    background-color: rgb(94, 231, 94);
+  }
+
+.dot{
+    position: absolute;
+    top: 0;
+    left: 35%;
+    display: none;
+}
+
+.dot2{
+    position: absolute;
+    top: 0;
+    left: 58%;
+    display: none;
+    color: var(--text-white);
+    font-size: 15px;
+}
+
+.play2:hover .dot{
+    display: block;
+}
+
+.menu:hover .dot2{
+    display: block;
+}
+
 
 .prog2{
     width: 150px;
@@ -440,6 +574,8 @@ footer{
 
 .right{
     flex-wrap: wrap;
+    width: 25%;
+    justify-content: flex-end;
 }
 
 .right button{
@@ -452,4 +588,207 @@ footer{
 
 .right button:nth-child(3){
     padding-right: 25px;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.menu-s{
+    display: none;
+}
+
+.menu-s i{
+    font-size: 30px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1100px){
+    
+    .card{
+        width: calc(100% / 4 - 20px);
+        margin: 10px;
+    }
+
+    .cards{
+        justify-content: flex-start;
+    }
+
+    .button-left{
+        flex-direction: column;
+    }
+
+    .menu{
+        display: none;
+    } 
+
+    .menu-s{
+        display: block;
+    }
+
+}
+
+@media screen  and (max-width: 700px) {
+    .card{
+        width: calc(100% / 2 - 20px);
+        margin: 10px;
+    }
+
+    .cards{
+        justify-content: flex-start;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    #created .cards{
+        justify-content: center;
+    }
+
+    #created .card{
+        width: 70%;
+        margin: 30px;
+    }
+
+    #artist .cards{
+        justify-content: center;
+    }
+
+    #artist .card{
+        width: 70%;
+        margin: 30px;
+    }
+
+    .left{
+        display: none;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .center{
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    #logo{
+        display: none;
+    }
+
+    #logo-small{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+    .logo {
+        height: 80px;
+        width: 100%;
+    }
+
+    .option span:nth-child(2){
+        display: none;
+    }
+
+    .option{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .playlist{
+        display: none;
+    }
+
+    .nav-playlist{
+        display: none;
+    }
+
+    .bottom-aside hr{
+        display: none;
+    }
+
+    .top-a span:nth-child(2),
+    .bot-a span:nth-child(2){
+        display: none;
+    }
+
+    .top-a{
+        width: 100%;
+    }
+
+    .top-a div{
+        width: 100%;
+    }
+
+    .top-a img{
+        width: 100%;
+    }
+
+    .bot-a img{
+        width: 100%;
+        height: auto;
+    }
+
+    .bot-a div{
+        object-fit: cover;
+    }
+
+    .top-a span:first-child{
+        width: 50%;
+    }
+
+    .top-a span:first-child img{
+        width: 60%;
+    }
+
+    .col1{
+        width: 50px;
+    }
+
+    .option div{
+        width: 100%;
+    }
+
+    .option img{
+        width: 100%;
+    }
+
+    .col2{
+        width: calc(100vw - 50px);
+    }
+
+    .col1-cont{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:300px){
+    .play1, .play2 {
+        justify-content: space-between;
+    }
+
+    .play1 button {
+        padding: 0;
+    }
+
+    .play1 .special {
+        padding: 0;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .btn-up {
+        padding: 5px;
+        text-align: center;
+    }
 }

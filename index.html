@@ -22,7 +22,8 @@
                     <div class="col1-cont flex">
 
                         <div class="logo">
-                            <img src="./img/logo.svg" alt="logo">
+                            <img src="./img/logo.svg" alt="logo" id="logo">
+                            <img src="./img/logo-small.svg" alt="logo-small" id="logo-small">
                         </div>
                         
                         <div class="option">
@@ -66,12 +67,12 @@
 
                         <div class="bottom-aside">
                             <div class="top-a">
-                                <span><img src="./img/download.svg" alt="download"></span>
+                                <div><img src="./img/download.svg" alt="download"></div>
                                 <span>Installa app</span>
                            </div> 
                            <hr>
                            <div class="bot-a">
-                                <span><img src="./img/profile.svg" alt="profile"></span>
+                                <div><img src="./img/profile.svg" alt="profile"></div>
                                 <span>Jhon Doe</span>
                            </div>
                         </div>
@@ -102,32 +103,62 @@
                             <h2>Recently played</h2>
                             <div class="flex cards">
                                 <div class="card">
-                                    <img src="./img/metal_lifting.jpg" alt="metal">
+                                    <div class="container-over">
+                                        <img src="./img/metal_lifting.jpg" alt="metal">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Heavy Metal</h3>
                                     <h4>Subtitle</h4>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/stranger.jpeg" alt="stranger">
+                                    <div class="container-over">
+                                        <img src="./img/stranger.jpeg" alt="stranger">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Stranger Things, Vol.1 (Netflix Original Series Soundtrack)</h3>
                                     <h4>Kyle Dixon & Michael Stein</h4>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/aquietplace.jpeg" alt="quiet">
+                                    <div class="container-over">
+                                        <img src="./img/aquietplace.jpeg" alt="quiet">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>A quiet place</h3>
                                     <h4>Subtitle</h4>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/split.jpeg" alt="split">
+                                    <div class="container-over">
+                                        <img src="./img/split.jpeg" alt="split">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Split</h3>
                                     <h4>Subtitle</h4>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/cure.jpeg" alt="cure">
+                                    <div class="container-over">
+                                        <img src="./img/cure.jpeg" alt="cure">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>A cure for wellness</h3>
                                     <h4>Subtitle</h4>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/sinister.jpeg" alt="sinister">
+                                    <div class="container-over">
+                                        <img src="./img/sinister.jpeg" alt="sinister">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Sinister</h3>
                                     <h4>Subtitle</h4>
                                 </div>
@@ -139,11 +170,21 @@
                             <h4>Più ascolti, più acuurati saranno i suggerimenti</h4>
                             <div class="flex cards">
                                 <div class="card">
-                                    <img src="./img/radar.jpeg" alt="radar">
+                                    <div class="container-over">
+                                        <img src="./img/radar.jpeg" alt="radar">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Release Radar</h3>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/mixdaily.jpeg" alt="daily">
+                                    <div class="container-over">
+                                        <img src="./img/mixdaily.jpeg" alt="daily">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Daily Mix 1</h3>
                                 </div>
                             </div>
@@ -154,11 +195,21 @@
                             <h4>Più ascolti, più acuurati saranno i suggerimenti</h4>
                             <div class="flex cards">
                                 <div class="card">
-                                    <img src="./img/youg.jpeg" alt="radar">
+                                    <div class="container-over">
+                                        <img src="./img/youg.jpeg" alt="youg">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Lana del Ray</h3>
                                 </div>
                                 <div class="card">
-                                    <img src="./img/einaudi.jpeg" alt="daily">
+                                    <div class="container-over">
+                                        <img src="./img/einaudi.jpeg" alt="einaudi">
+                                        <div class="overlay">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </div>
                                     <h3>Ludovico Einaudi</h3>
                                 </div>
                             </div>
@@ -176,13 +227,14 @@
             <div class="flex foot-cont">
 
                 <div class="flex left">
-                    <span class="player-img">
+
+                    <div class="player-img">
                         <img src="./img/sinister.jpeg" alt="player-left">
-                    </span>
-                    <span class="text-play">
+                    </div>
+                    <div class="text-play">
                         <div>Sinister</div>
                         <div>Brano Nome</div>
-                    </span>
+                    </div>
 
                     <div class="flex button-left">
                         <button>
@@ -215,13 +267,15 @@
                     </div>
                     <div class="flex play2">
                         <span>0:25</span>
-                        <progress class="prog1"></progress>
+                        <progress class="prog1 flex">
+                        </progress>  
+                        <span class="dot"><i class="fa-solid fa-circle"></i></span>
                         <span>4:35</span>
                     </div>
                 </div>
 
                 <div class="flex right">
-                    <div>
+                    <div class="menu">
                         <button>
                             <i class="fa-solid fa-list-ul"></i>
                         </button>
@@ -231,10 +285,17 @@
                         <button>
                             <i class="fa-solid fa-volume-high"></i>
                         </button>
-                    </div>
-                    <progress class="prog2"></progress>
-                </div>
+                        
+                        <progress class="prog2">
 
+                        </progress>
+                        <span class="dot2"><i class="fa-solid fa-circle"></i></span>
+                    </div>
+
+                    <button class="menu-s">
+                        <i class="fa-solid fa-list-ul"></i>
+                    </button>
+                </div>
 
             </div>
 
