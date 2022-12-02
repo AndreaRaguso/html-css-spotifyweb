@@ -71,7 +71,7 @@ section{
 /* MAIN */
 
 .main-cont{
-    max-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
 }
 
 /* COL2 */
@@ -251,7 +251,9 @@ header{
     width: 200px;
     background-color: var(--aside);
     overflow: auto;
-    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .col1 span{
@@ -264,16 +266,29 @@ header{
 }
 
 .col1-cont{
-    width: 85%;
-    margin: 0 auto;
     color: var(--text-light);
     flex-wrap: wrap;
-    height: 100%;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+.contain{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.up{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .col1-cont div{
     width: 100%;
+
 }
 
 .logo{
@@ -309,7 +324,9 @@ header{
 }
 
 .playlist{
-    padding-bottom: 20px;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
 }
 
 .playlist h3{
@@ -333,7 +350,8 @@ header{
 
 .nav-playlist{
     overflow: auto;
-    min-height: 300px;
+    height: 100%;
+    flex-direction: column;
 }
 
 .nav-playlist ul{
@@ -347,11 +365,12 @@ header{
 }
 
 .bottom-aside{
-    align-self: flex-end;
+    height: 120px;
 }
 
 .top-a,.bot-a{
     padding: 10px 0;
+    height: 50%;
 }
 
 .top-a div,
@@ -366,6 +385,7 @@ header{
 
 .bottom-aside span{
     vertical-align: middle;
+    color: var(--text-light);
 }
 
 .top-a img{
@@ -379,7 +399,7 @@ header{
     padding: 4px;
 }
 
-.bot-a{
+.bot-a span{
     color:var(--text-white);
     font-weight: bold;
 }
@@ -646,48 +666,34 @@ footer{
 
 @media screen and (max-width: 600px){
 
+    
     .col1{
-        padding-bottom: 30px;
+        width: 50px;
     }
 
-    #artist .cards .card{
-        margin-bottom: 40px;
+    
+    .col2{
+        width: calc(100vw - 50px);
     }
 
-    #created .cards{
-        justify-content: center;
-    }
 
     #created .card{
         width: 70%;
         margin: 30px;
     }
 
-    #artist .cards{
+    #artist .cards,
+    #created .cards{
         justify-content: center;
+    }
+
+    #artist .cards .card{
+        margin-bottom: 40px;
     }
 
     #artist .card{
         width: 70%;
         margin: 40px;
-    }
-
-    .left{
-        display: none;
-    }
-
-    .right{
-        display: none;
-    }
-
-    .center{
-        width: 100%;
-        justify-content: center;
-    }
-
-
-    #logo{
-        display: none;
     }
 
     #logo-small{
@@ -701,69 +707,40 @@ footer{
         width: 100%;
     }
 
-    .option span:nth-child(2){
-        display: none;
-    }
-
     .option{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .playlist{
-        display: none;
-    }
-
-    .nav-playlist{
-        display: none;
-    }
-
-    .bottom-aside hr{
-        display: none;
-    }
-
+    .bottom-aside hr,
+    .playlist,
+    .nav-playlist,
     .top-a span,
-    .bot-a span{
+    .bot-a span,
+    .option span:nth-child(2),
+    #logo,
+    .right,
+    .left{
         display: none;
+    }
+
+
+    .bottom-aside{
+        padding: 0;
+        width: 100%;
+    }
+
+    .bottom-aside img{
+        width: 100%;
+    }
+
+    .bottom-aside div{
+        padding: 0;
     }
 
     .top-a{
-        width: 100%;
-    }
-
-    .top-a div{
-        width: 100%;
-    }
-
-    .top-a img{
-        width: 100%;
-    }
-
-    .bot-a{
-        width: 1000%;
-    }
-
-    .bot-a img{
-        width: 100%;
-        height: 30%;
-    }
-
-    .bot-a div{
-        object-fit: cover;
-        height: 100px;
-    }
-
-    .top-a span:first-child{
-        width: 50%;
-    }
-
-    .top-a span:first-child img{
-        width: 60%;
-    }
-
-    .col1{
-        width: 50px;
+        margin-right: 5px;
     }
 
     .option div{
@@ -774,12 +751,23 @@ footer{
         width: 100%;
     }
 
-    .col2{
-        width: calc(100vw - 50px);
+
+    .contain{
+        width: 90%;
     }
 
-    .col1-cont{
-        width: 60%;
+    .up{
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .option{
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    .foot-cont{
+        justify-content: center;
     }
 }
 
