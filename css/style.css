@@ -251,6 +251,7 @@ header{
     width: 200px;
     background-color: var(--aside);
     overflow: auto;
+    height: calc(100vh - 100px);
 }
 
 .col1 span{
@@ -389,7 +390,7 @@ header{
 footer{
     background-color: var(--footer);
     padding: 0 20px;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     right: 0;
     width: 100%;
@@ -646,7 +647,11 @@ footer{
 @media screen and (max-width: 600px){
 
     .col1{
-        height: calc(100vh - 100px);
+        padding-bottom: 30px;
+    }
+
+    #artist .cards .card{
+        margin-bottom: 40px;
     }
 
     #created .cards{
@@ -718,8 +723,8 @@ footer{
         display: none;
     }
 
-    .top-a span:nth-child(2),
-    .bot-a span:nth-child(2){
+    .top-a span,
+    .bot-a span{
         display: none;
     }
 
@@ -735,13 +740,18 @@ footer{
         width: 100%;
     }
 
+    .bot-a{
+        width: 1000%;
+    }
+
     .bot-a img{
         width: 100%;
-        height: auto;
+        height: 30%;
     }
 
     .bot-a div{
         object-fit: cover;
+        height: 100px;
     }
 
     .top-a span:first-child{
