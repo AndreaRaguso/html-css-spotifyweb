@@ -71,14 +71,13 @@ section{
 /* MAIN */
 
 .main-cont{
-    height: calc(100vh - 100px);
+    max-height: calc(100vh - 100px);
 }
 
 /* COL2 */
 
 .col2{
     width: calc(100vw - 200px);
-    height: calc(100vh - 100px);
     overflow: auto;
     background-color: var(--main);
 }
@@ -251,7 +250,6 @@ header{
 .col1{
     width: 200px;
     background-color: var(--aside);
-    max-height: calc(100vh - 100px);
     overflow: auto;
 }
 
@@ -269,7 +267,8 @@ header{
     margin: 0 auto;
     color: var(--text-light);
     flex-wrap: wrap;
-    height: calc(100vh - 100px);
+    height: 100%;
+    overflow: auto;
 }
 
 .col1-cont div{
@@ -390,10 +389,10 @@ header{
 footer{
     background-color: var(--footer);
     padding: 0 20px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     right: 0;
-    
+    width: 100%;
 }
 
 .foot-cont{
@@ -646,6 +645,10 @@ footer{
 
 @media screen and (max-width: 600px){
 
+    .col1{
+        height: calc(100vh - 100px);
+    }
+
     #created .cards{
         justify-content: center;
     }
@@ -661,7 +664,7 @@ footer{
 
     #artist .card{
         width: 70%;
-        margin: 30px;
+        margin: 40px;
     }
 
     .left{
